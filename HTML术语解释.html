@@ -1,0 +1,148 @@
+<!DOCTYPE html><!--这一行是文档类型声明	
+				      用来告诉浏览器应该用什么文档类型定义来解析该文档 
+              -->
+<html>
+	
+<head>
+    <meta charset="UTF-8">
+    <title>HTML术语解释</title>
+    <!--标题栏元素title用来定义文档的标题,即在标题栏内显示的内容
+    	定义浏览器标题栏中的标题
+    	提供页面在收藏夹中的标题
+    	在搜索引擎搜索结果中显示的标题
+    	title是头部唯一一个必须的元素
+    -->
+</head>
+
+<body>
+    <h3>元素=起始标签+内容+终止标签</h3>
+    <h1>这是一个h1标签</h1>
+    <h2 align="right">这是一个h2标签</h2>
+    <h3 align="left">这是一个h3标签</h3>
+    <h4 align="center">这是一个h4标签</h4>
+    <h5 align="right">这是一个h5标签</h5>
+    <h6>这是一个h6标签</h6>
+    <!--标题元素h的语法:
+    	<h# align="left|center|right">标题内容</h#>
+    	#值从1到6是标题的大小
+    	align是一个可选的属性,指定标题的对齐方式
+    	标签还可以添加属性
+    -->
+    <br />
+    <br />
+    <p>这是一个段落标签p</p>
+    <!--段落元素p的语法
+    	<p align="left|center|right">段落内容</p>
+    -->
+    <br />
+    <br />
+    <hr align="center" size="5" width="500" color="red" />
+    <!--水平线元素hr语法
+    	<hr align="left|center|right" size="pixels" width="pixels or %" color="" />
+    -->
+    <br />
+    <br />
+    <div>节元素div标签</div>
+    <br />
+    <br />
+    <a href="测试链接.html">跳转链接</a>
+    <!--锚元素a既可以用来定义超链接也可以定义页内链接
+    	锚元素a的语法
+    	<a href="测试链接.html" target="_blank">链接上要显示的文本</a>
+    	默认情况下,未被访问的链接是蓝色带下划线,已被访问的链接是紫色带下划线,活动链接为红色带下划线
+    	当a元素指向一个资源时,叫做超链接,但是当a元素定义文档内部一个地址时,叫做页内链接
+    	使用a元素的name属性时,a元素就在HTML文档内部定义了一个书签标记
+    	书签标记语法
+    	<a name="C6">页内链接锚点</a>
+    	链向一个书签标记语法
+    	<a href="#C6">页内链接跳转</a>注意#号!注意#号!注意#号!
+    	书签标记在任何方式下都不会显示,对浏览器不可见
+    	邮件超链接mailto
+    	<a href="mailto:someone@site.com">向我发送邮件</a>
+    	超级链接会激活一个已经填好收件人地址的新邮件信息窗口
+    -->
+    <br />
+    <a href="测试链接.html" target="_blank">跳转链接(新标签打开)</a>
+    <br />
+    <a href="#C6">页内链接跳转</a>
+    <br />
+    <a href="mailto:someone@site.com">向我发送邮件</a>
+    <br />
+    <a href="download/HTML是什么.txt" >下载HTML是什么.txt</a>
+    <br />
+    <a href="download/download.rar" >下载download.rar</a>
+    <!--下载链接两种实现
+    	方法一
+    	1.把要下载的文件上传到网站服务器的指定目录
+    	2.添加一个标准锚链接到文件
+    	<a href="url">下载</a>
+    	3.访客右击链接并选择目标另存为
+    	方法二
+    	1.换成压缩文件rar
+    	2.添加一个标准锚链接到文件
+    	<a href="url">下载</a>
+    -->
+    <!--图片元素img使用img标签嵌入一个图像到HTML文档中
+    	图片元素img的语法
+    	<img src="url" alt="图片描述用于不能显示图片时的描述" />
+    	img元素可以做成超链接
+    -->
+    <a href="测试链接.html" ><img src="images/x.jpg"  border="1px" height="277"/> </a>
+    <br />
+    <!--表格元素table
+    	表格使用<table>标签定义,一个表格分为若干行(使用<tr>行</tr>标签)
+   		每个行被分为若干个列(使用<td>列</td>标签)
+   		表格元素table的语法
+   		<table border="pixels">
+   			<caption>表格标题</caption>
+   			<tr><th>表头栏</th><th>表头栏</th></tr>
+   			<tr><td></td><td></td></tr>
+   		</table>
+    -->
+    <table border="4">
+   			<caption>表格标题</caption>
+   			<tr>
+   				<th>编号</th>
+   				<th>学号</th>
+   				<th>姓名</th>
+   				<th>性别</th>
+   				<th>专业</th>
+   			</tr>
+   			<tr>
+   				<td>12345</td>
+   				<td>1426767</td>
+   				<td>张三</td>
+   				<td>男</td>
+   				<td>软件开发</td>
+   			</tr>
+   			<tr>
+   				<td>12346</td>
+   				<td>1457457</td>
+   				<td>李四</td>
+   				<td>男</td>
+   				<td>软件开发</td>
+   			</tr>
+   		</table>
+    <br />
+    <video width="320" height="480" controls="controls">
+    	<source src="" type="video/mp4"></source>
+    	<source src="" type="video/webm"></source>
+    	<source src="" type="video/ogg" ></source>
+    </video>
+    <!--视频元素video
+    	使用video元素时明确width和height属性
+    	网页加载时会为视频保留空间,比例不变
+    	视频元素video的语法
+    	<video src="url" width="" height="" attributes>text</video>
+    	controls:可选属性,显示控制按钮,布尔类型
+    	autoplay:可选属性,是否自动播放,布尔类型
+    	loop:可选属性,是否循环播放,布尔类型
+    	为了在video元素中包含多种格式的视频文件,在video元素中嵌套了另外一个source元素
+    	source元素用于指定视频源文件相当于src属性,当使用source时就不再使用src
+    	source元素必须包含type属性,这个属性指定MIME类型
+    -->
+    <p><a name="C6">页内链接锚点</a></p>
+    <a href="HTML5.html" >HTML5布局</a>
+</body>
+
+</html>

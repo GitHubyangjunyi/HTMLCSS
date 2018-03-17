@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>CSS选择符</title>
+		<style type="text/css">
+			h1,h2{text-align: center;}/*标签选择符*/
+			h4.center{text-align: center;}/*类选择符*/
+			h4.right{text-align: right;}
+			.centerall{text-align: center;}
+			#align{text-align: center;}
+			h3.#align{text-align: right;}
+			div p{font-style: italic;}/*后代选择符*/
+			div>p{font-style: italic;}/*子选择符*/
+			div+p{font-style: italic;}/*临近选择符*/
+			/*类选择符的语法
+			 *标签名.classname1{属性:值;属性:值;}
+			 * 	   .classname2{属性:值;属性:值;}
+			 *同一个类可用于多个元素 
+			 *几个类可以用于多个元素
+		     *id选择符的语法
+		     *标签名#idname1{属性:值;属性:值;}
+		     *     #idname1{属性:值;属性:值;}
+		     *每个元素只能有一个id
+		     *每个页面只能有一个元素使用该id
+			 *以上限定是标准规定,具体实现依据浏览器 
+			 */
+			/*css常用属性*/
+			  .cssproperty{
+				font-family: "微软雅黑" "宋体" "楷体";/*字体名称浏览器会一个一个尝试*/
+				font-size: 45;/*字体大小值:length|%|small|medium|large|smaller|larger*/
+				/*绝对大小(mm/cm/in/pt)设置文本到指定大小不允许用户在浏览器中改变文字大小*/
+				/*相对大小(em/ex/px)根据周围元素设置大小允许用户改变文字大小*/
+				/*1em=16px*/
+				font-style: italic;/*字体风格*/
+				font-weight: 100;/*字体粗细:normal(默认)|bold|bolder|lighter|100|*/
+				font-variant: normal;/*字体变化(决定是否显示小型大写字母):normal(默认)|small-caps|inherit*/
+				font:45 "微软雅黑" italic;/*属性简写*/
+				text-align: center;/*文本对齐:left|right|center|justify(每行同宽左右边距整齐)*/
+				text-decoration: ;/*文本修饰:none(可以用来去掉链接的下划线)|underline|overline|line-through|blink*/
+				background-repeat: repeat;/*背景重复:repeat(默认)|repeat-x|repeat-y|no-repeat*/
+				background:repeat inherit;/*背景简写*/
+				border-style: dotted;/*边框样式:none(默认)|dotted|dashed|solid|double|groove|ridge|inset|outset*/
+				border-width: 1px;/*边框宽度*/
+				border-color: red;/*边框颜色*/
+				border:dashed #E31559;/*边框简写*/
+			}
+			/*CSS伪类选择符*/
+			a:link{color: blue;}/*指定未访问的链接样式*/
+			a:visited{color: red;}/*指定已经访问过的链接样式*/
+			a:hover{color: black;}/*指定当鼠标悬浮时的链接样式*/
+			a:active{color: green;}/*指定当被单击时的链接样式*/
+			/*hover必须在link和visited之后,active必须在hover之后*/
+			/*伪类语法
+			 * selector:pseudo-class{属性:值}
+			 */
+		</style>
+	</head>
+	<body>
+		<h2>CSS选择符包括类选择符和id选择符</h2>
+		<p>
+			类选择符和id选择符都有两种定义方式:
+			<br />有标签选择符(限定于该标签说包含的内容)
+			<br />无标签选择符
+		</p>
+		<h4 class="center">居中对齐</h4>
+		<h4 class="right">靠右对齐</h4>
+		<h4 class="right center">一个元素调用多个类,后定义的样式为准</h4>
+		<h4 class="center right">一个元素调用多个类,后定义的样式为准</h4>
+		<p class="centerall">居中对齐的p标签</p>
+		<p class="center">有标签的类选择符限定了使用范围,p标签无法生效</p>
+		<p id="align">第一次使用id选择符</p>
+		<p id="align">第二次使用id选择符</p>
+		<h3 id="align">选择符越具体就实现哪个</h3>
+		<h3 id="h3.align">选择符越具体就实现哪个</h3>
+		<a href="测试链接.html">测试链接(未访问蓝色,放上去黑色,单击绿色,访问过红色)</a>
+		<div>
+			<p>使用后代选择符产生斜体字</p>
+		</div>
+	</body>
+</html>

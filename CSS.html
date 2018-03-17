@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>CSS</title>
+		<style type="text/css">
+			@import url("css/test2.css");
+			h4.css1{border-width: 2;border: solid;text-align: center;color: red;}
+			h4.css2{border-width: 2;border: solid;text-align: left;color: blue;}
+			p{border-width: 2;border: solid;text-align: center;color: blue;!important}
+		</style>
+		<link rel="stylesheet" type="text/css" href="css/test.css" />
+		<!--使用HTML<link>标签链入外部样式表
+			也可以导入外部样式表
+			在内部样式表中使用导入的外部样式表,内部样式表的属性不受任何影响
+			导入外部样式表的语法
+			<style type="text/css">
+				@import url("styles1.css");
+				@import url("styles2.css");
+				内部样式表的声明部分
+			</style>
+			@import声明必须置于<style>元素的开始部分然后才是内部样式表的声明
+			@import声明的顺序决定样式表如何层叠
+			@import声明后的分号不能省略
+		-->
+	</head>
+	<body>
+		<p>内部样式表!important</p>
+		<p style="font: 30pt;color: red;">行内样式表加内部样式表!important</p>
+		<!--行内样式的语法
+			<标签 style="属性:值;属性:值;"></标签>
+       -->
+		<h4 class="css1">内部样式表</h4>
+		<h4 class="css2">内部样式表</h4>
+		<h4 class="mycss">链入外部样式表</h4>
+		<h4 class="mycss1">导入外部样式表</h4>
+		<!--内部样式表的语法
+			<style type="text/css">
+				selector1{属性:值;属性:值;}
+				selector2{属性:值;属性:值;}
+			</style>
+			内部样式表只影响所在的页面,可以使用类和id
+			内部样式表具有比外部样式表更高的优先级
+			如果内部样式表被放置在连接到外部的样式表的后面,内部样式表在层叠上有更高的优先级
+			缺点是内部样式表加载时间长,而外部样式表由浏览器缓存
+       -->
+		<!--关于样式表的层叠优先级
+			1.!important的用户样式(行内样式表更高级)
+			2.!important的作者样式
+			3.作者样式
+			4.用户样式
+			5.浏览器样式
+			!important规则将始终被应用
+			层叠顺序
+			1.首先寻找所有声明和指定的媒体类型
+			2.在看它来自什么样式表,作者样式第一位,然后用户样式,接着浏览器
+			    有!important的用户样式比有!important的作者样式更高的优先级
+			3.一个选择符越是具体就有越高的优先级
+			4.最后按定义的顺序排列,后面定义的比前面的有更高的优先级
+			    导入的外部样式表被认为在内部样式表之前
+      -->
+	</body>
+</html>
